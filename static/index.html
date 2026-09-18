@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nemotron 3 Diarization — Showcase</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">Nemotron 3 <span>Diarization</span></a>
+    <div class="nav-links">
+      <a href="/">Showcase</a>
+      <a href="/lab">Live lab</a>
+      <a href="https://github.com/cobusgreyling/nemotron-3-diarization/blob/main/BLOG.md">Blog</a>
+      <a href="https://github.com/cobusgreyling/nemotron-3-diarization/blob/main/notebooks/nemotron_3_diarization_colab.ipynb">Colab notebook</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">NVIDIA Early Access · overlapping voices</p>
+    <h1>Who spoke when, even when they talk at the same time.</h1>
+    <p class="sub">
+      I could download the Nemotron 3 Diarization preview from NGC Early Access.
+      This Mac has no NVIDIA GPU, so the checkpoint runs in a Colab T4 notebook
+      with a Gradio UI. This showcase replays that pipeline locally: ASR for the
+      words, diarization for the speakers, a transcript you can actually assign.
+    </p>
+    <p class="embargo">Embargoed until 23 Sep 2026, 08:00 PT — private repo, no public demo URL.</p>
+    <img class="banner" src="/static/header.jpg" alt="Overlapping lime and teal voice waveforms" />
+    <div class="controls">
+      <a class="btn primary" href="/lab">Open the live lab</a>
+      <a class="btn" href="#demo">Play overlapping voices</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" aria-label="Model snapshot">
+      <div class="stat"><b>~100M</b><span>parameters</span></div>
+      <div class="stat"><b>~320 ms</b><span>to start processing</span></div>
+      <div class="stat"><b>4 GB+</b><span>minimum GPU memory</span></div>
+      <div class="stat"><b>8 speakers</b><span>overlap · streaming + offline</span></div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px">
+      <h2>ASR names the words. Diarization names the people.</h2>
+      <p class="sub">Same audio. Without speaker labels a voice agent hears “No. Yes.” With them it hears the VP say no and the intern say yes.</p>
+      <img class="chart" src="/static/pipeline.svg" alt="ASR plus diarization equals a speaker-aware transcript" />
+    </section>
+
+    <section id="demo" class="panel" style="margin-bottom:18px">
+      <h2>Three voices, three overlaps</h2>
+      <p class="sub">A 9-second launch review. Product, engineering, and legal talk over each other. Hatched bands are simultaneous speech.</p>
+      <div class="controls">
+        <button class="btn primary" id="playBtn" type="button">Play mix</button>
+        <button class="btn" id="toggleBtn" type="button">Show blended transcript</button>
+        <span class="hint" id="clock">0.00s</span>
+      </div>
+      <audio id="player" src="/api/audio" preload="auto"></audio>
+      <div id="lanes" class="lane-wrap"></div>
+      <div id="transcript" class="transcript"></div>
+    </section>
+
+    <section class="grid-2" style="margin-bottom:18px">
+      <div class="panel">
+        <h2>SOTA on public benchmarks</h2>
+        <p class="sub">Redrawn from the NVIDIA pre-brief. Grey is Sortformer-4spk, green is Nemotron 3, both at 1.04 s. Lower DER is better.</p>
+        <img class="chart" src="/static/der-chart.svg" alt="DER bar chart Nemotron 3 versus Sortformer" />
+      </div>
+      <div class="panel">
+        <h2>Speaker lanes, live</h2>
+        <p class="sub">The model paints one row per speaker and keeps going when two rows light up at once.</p>
+        <img class="lanes-photo" src="/static/showcase-lanes.jpg" alt="Holographic speaker-lane dashboard" />
+        <img class="chart" style="margin-top:12px" src="/static/rtfx-chart.svg" alt="Accuracy versus throughput" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Where this lands</h2>
+      <div class="usecases">
+        <div><strong>Meeting notes</strong>Assign the decision to the person who made it.</div>
+        <div><strong>Voice agents</strong>Interpret instructions in a room, not a monologue.</div>
+        <div><strong>Contact-center QA</strong>Separate agent and customer turns.</div>
+        <div><strong>Call analytics</strong>Talk time, interruptions, handoffs.</div>
+        <div><strong>Captions</strong>Attribute live commentary.</div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:18px">
+      <h2>How I ran it with no local GPU</h2>
+      <p class="sub">
+        1. Download <code>Nemotron-3-Diarization-preview.nemo</code> from the NGC
+        <code>diarization-ea</code> team (Early Access).<br />
+        2. Open <code>notebooks/nemotron_3_diarization_colab.ipynb</code> in Google Colab,
+        pick a <strong>T4 GPU</strong>, upload the <code>.nemo</code> to Drive.<br />
+        3. The notebook loads NeMo, diarizes, optionally transcribes, and launches
+        <strong>Gradio</strong> so the same speaker-lane UI runs next to the GPU.<br />
+        4. This Mac only hosts the showcase — Demo mode, no CUDA.
+      </p>
+    </section>
+  </main>
+  <p class="footer">Private until embargo lifts. Checkpoint is not in this repo. Apache-2.0 for the lab code.</p>
+  <script src="/static/app.js"></script>
+  <script>window.NemoDiar.mountShowcase();</script>
+</body>
+</html>

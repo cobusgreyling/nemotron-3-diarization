@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" role="img" aria-label="Accuracy versus throughput: Nemotron 3 is faster and more accurate than Sortformer">
+  <rect width="920" height="340" rx="18" fill="#0c0f0a"/>
+  <text x="32" y="40" fill="#e8f0dc" font-family="system-ui,sans-serif" font-size="20" font-weight="700">Faster and more accurate</text>
+  <text x="32" y="64" fill="#8a947c" font-family="system-ui,sans-serif" font-size="13">Macro-mean DER across 8 benchmarks vs real-time factor · batch size 1 · NVIDIA briefing</text>
+  <!-- axes -->
+  <line x1="80" y1="90" x2="80" y2="280" stroke="#2a3324"/>
+  <line x1="80" y1="280" x2="880" y2="280" stroke="#2a3324"/>
+  <text x="40" y="190" fill="#8a947c" font-family="system-ui,sans-serif" font-size="11" transform="rotate(-90 40 190)">DER % (lower better)</text>
+  <text x="480" y="318" fill="#8a947c" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">RTFx · higher is better</text>
+  <!-- Sortformer line ~20.3 at 0.32s, 19.0 at 1.04s, 18.1 at 30.4s -->
+  <polyline points="140,118 360,148 820,168" fill="none" stroke="#8a947c" stroke-width="3"/>
+  <circle cx="140" cy="118" r="6" fill="#8a947c"/>
+  <circle cx="360" cy="148" r="6" fill="#8a947c"/>
+  <circle cx="820" cy="168" r="6" fill="#8a947c"/>
+  <text x="150" y="110" fill="#b7c0aa" font-family="system-ui,sans-serif" font-size="11">sortformer 0.32s</text>
+  <text x="372" y="140" fill="#b7c0aa" font-family="system-ui,sans-serif" font-size="11">1.04s</text>
+  <!-- Nemotron line ~11.3 at 0.32s, 10.7 at 0.64s, 10.4 at 1.04s, 9.6 at 30.4s -->
+  <polyline points="140,232 250,242 360,248 820,262" fill="none" stroke="#76B900" stroke-width="3"/>
+  <circle cx="140" cy="232" r="6" fill="#76B900"/>
+  <circle cx="250" cy="242" r="6" fill="#76B900"/>
+  <circle cx="360" cy="248" r="6" fill="#76B900"/>
+  <circle cx="820" cy="262" r="6" fill="#76B900"/>
+  <text x="150" y="222" fill="#76B900" font-family="system-ui,sans-serif" font-size="12" font-weight="700">nemotron-3 · 0.32s start</text>
+  <text x="600" y="236" fill="#76B900" font-family="system-ui,sans-serif" font-size="12">~3× throughput, lower error</text>
+</svg>

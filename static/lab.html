@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nemotron 3 Diarization — Live lab</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">Nemotron 3 <span>Diarization</span></a>
+    <div class="nav-links">
+      <a href="/">Showcase</a>
+      <a href="/lab">Live lab</a>
+      <a href="https://github.com/cobusgreyling/nemotron-3-diarization/blob/main/notebooks/nemotron_3_diarization_colab.ipynb">Colab</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Live lab · Demo mode (no local GPU)</p>
+    <h1>Multiple simultaneous voices</h1>
+    <p class="sub">
+      Play a three-speaker mix with three overlaps. Colour is identity.
+      Hatch is two people talking at once. Toggle the blended blob to see
+      what a transcript looks like without diarization.
+    </p>
+    <img class="banner" src="/static/header.jpg" alt="Overlapping voice waveforms" />
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="controls">
+        <button class="btn primary" id="playBtn" type="button">Play mix</button>
+        <button class="btn" id="toggleBtn" type="button">Show blended transcript</button>
+        <span class="hint" id="clock">0.00s</span>
+        <span class="hint" id="status"></span>
+      </div>
+      <p class="hint">Space plays and pauses. This page does not load the <code>.nemo</code> — Colab does.</p>
+      <audio id="player" src="/api/audio" preload="auto"></audio>
+      <div id="lanes" class="lane-wrap"></div>
+      <div id="transcript" class="transcript"></div>
+    </section>
+  </main>
+  <p class="footer">Demo JSON matches the Colab export schema. Real inference: T4 + notebook Gradio UI.</p>
+  <script src="/static/app.js"></script>
+  <script>window.NemoDiar.mountLab();</script>
+</body>
+</html>

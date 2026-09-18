@@ -1,0 +1,84 @@
+{
+  "id": "launch-review-overlap",
+  "title": "Launch review \u2014 three speakers, three overlaps",
+  "audio": "/static/demo-mix.wav",
+  "duration_sec": 9.022,
+  "sample_rate": 16000,
+  "note": "Constructed multi-speaker mix in the JSON shape the Colab notebook emits after Nemotron 3 Diarization + ASR. Overlaps are intentional.",
+  "speakers": [
+    {
+      "id": "speaker_0",
+      "name": "Priya \u00b7 Product",
+      "color": "#76B900"
+    },
+    {
+      "id": "speaker_1",
+      "name": "Daniel \u00b7 Engineering",
+      "color": "#2DD4BF"
+    },
+    {
+      "id": "speaker_2",
+      "name": "Marcus \u00b7 Legal",
+      "color": "#F5A623"
+    }
+  ],
+  "segments": [
+    {
+      "speaker": "speaker_0",
+      "start": 0.0,
+      "end": 2.063,
+      "text": "The launch window is Friday."
+    },
+    {
+      "speaker": "speaker_1",
+      "start": 1.15,
+      "end": 2.917,
+      "text": "We should ship it this afternoon."
+    },
+    {
+      "speaker": "speaker_0",
+      "start": 3.55,
+      "end": 5.756,
+      "text": "Legal still has to sign off."
+    },
+    {
+      "speaker": "speaker_2",
+      "start": 4.7,
+      "end": 8.241,
+      "text": "Can we at least wait for the security review?"
+    },
+    {
+      "speaker": "speaker_1",
+      "start": 7.1,
+      "end": 8.572,
+      "text": "The customers are waiting."
+    }
+  ],
+  "blended": "The launch window is Friday. We should ship it this afternoon. Legal still has to sign off. Can we at least wait for the security review? The customers are waiting.",
+  "overlaps": [
+    {
+      "start": 1.15,
+      "end": 2.063,
+      "speakers": [
+        "speaker_0",
+        "speaker_1"
+      ]
+    },
+    {
+      "start": 4.7,
+      "end": 5.756,
+      "speakers": [
+        "speaker_0",
+        "speaker_2"
+      ]
+    },
+    {
+      "start": 7.1,
+      "end": 8.241,
+      "speakers": [
+        "speaker_2",
+        "speaker_1"
+      ]
+    }
+  ]
+}

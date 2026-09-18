@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-label="Diarization error rate: Sortformer versus Nemotron 3">
+  <rect width="920" height="520" rx="18" fill="#0c0f0a"/>
+  <text x="32" y="42" fill="#e8f0dc" font-family="system-ui,sans-serif" font-size="20" font-weight="700">Nemotron 3 Diarization vs Sortformer-4spk</text>
+  <text x="32" y="68" fill="#8a947c" font-family="system-ui,sans-serif" font-size="13">Diarization Error Rate (%) at 1.04 s latency · lower is better · NVIDIA briefing figures</text>
+  <g font-family="system-ui,sans-serif" font-size="12">
+    <rect x="700" y="28" width="12" height="12" rx="2" fill="#5b6454"/>
+    <text x="718" y="39" fill="#b7c0aa">sortformer-4spk</text>
+    <rect x="700" y="48" width="12" height="12" rx="2" fill="#76B900"/>
+    <text x="718" y="59" fill="#b7c0aa">nemotron-3</text>
+  </g>
+  <!-- scale 0-35 -->
+  <g fill="#3a4234" font-family="system-ui,sans-serif" font-size="11">
+    <line x1="220" y1="96" x2="220" y2="470" stroke="#2a3324"/>
+    <line x1="220" y1="470" x2="880" y2="470" stroke="#2a3324"/>
+    <text x="220" y="488" fill="#8a947c" text-anchor="middle">0</text>
+    <text x="408" y="488" fill="#8a947c" text-anchor="middle">10</text>
+    <text x="597" y="488" fill="#8a947c" text-anchor="middle">20</text>
+    <text x="785" y="488" fill="#8a947c" text-anchor="middle">30</text>
+  </g>
+  <!-- 18.86 px per % (660/35) -->
+  <g font-family="system-ui,sans-serif" font-size="13" fill="#d5deca">
+    <!-- NOTSOFAR1 MHM 22.12 / 7.70 -->
+    <text x="208" y="118" text-anchor="end">NOTSOFAR1 MHM</text>
+    <rect x="220" y="104" width="417" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="116" width="145" height="10" rx="3" fill="#76B900"/>
+    <text x="372" y="125" fill="#0c0f0a" font-size="10" font-weight="700">7.70</text>
+    <!-- NOTSOFAR1 SC 31.81 / 12.77 -->
+    <text x="208" y="162" text-anchor="end">NOTSOFAR1 SC</text>
+    <rect x="220" y="148" width="600" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="160" width="241" height="10" rx="3" fill="#76B900"/>
+    <text x="468" y="169" fill="#0c0f0a" font-size="10" font-weight="700">12.77</text>
+    <!-- AliMeeting Near 12.47 / 6.59 -->
+    <text x="208" y="206" text-anchor="end">AliMeeting Near</text>
+    <rect x="220" y="192" width="235" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="204" width="124" height="10" rx="3" fill="#76B900"/>
+    <text x="350" y="213" fill="#0c0f0a" font-size="10" font-weight="700">6.59</text>
+    <!-- AMI MHM 16.36 / 9.48 -->
+    <text x="208" y="250" text-anchor="end">AMI MHM</text>
+    <rect x="220" y="236" width="309" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="248" width="179" height="10" rx="3" fill="#76B900"/>
+    <text x="406" y="257" fill="#0c0f0a" font-size="10" font-weight="700">9.48</text>
+    <!-- AMI SDM 21.73 / 12.80 -->
+    <text x="208" y="294" text-anchor="end">AMI SDM</text>
+    <rect x="220" y="280" width="410" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="292" width="241" height="10" rx="3" fill="#76B900"/>
+    <text x="468" y="301" fill="#0c0f0a" font-size="10" font-weight="700">12.80</text>
+    <!-- DIHARD III 19.60 / 13.18 -->
+    <text x="208" y="338" text-anchor="end">DIHARD III</text>
+    <rect x="212" y="318" width="668" height="36" rx="8" fill="none" stroke="#76B900" stroke-opacity="0.45"/>
+    <rect x="220" y="324" width="370" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="336" width="249" height="10" rx="3" fill="#76B900"/>
+    <text x="476" y="345" fill="#0c0f0a" font-size="10" font-weight="700">13.18</text>
+    <!-- AliMeeting Far 15.58 / 10.80 -->
+    <text x="208" y="382" text-anchor="end">AliMeeting Far</text>
+    <rect x="220" y="368" width="294" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="380" width="204" height="10" rx="3" fill="#76B900"/>
+    <text x="430" y="389" fill="#0c0f0a" font-size="10" font-weight="700">10.80</text>
+    <!-- CALLHOME 11.31 / 10.29 -->
+    <text x="208" y="426" text-anchor="end">CALLHOME</text>
+    <rect x="220" y="412" width="213" height="10" rx="3" fill="#5b6454"/>
+    <rect x="220" y="424" width="194" height="10" rx="3" fill="#76B900"/>
+    <text x="420" y="433" fill="#0c0f0a" font-size="10" font-weight="700">10.29</text>
+  </g>
+  <text x="32" y="508" fill="#8a947c" font-family="system-ui,sans-serif" font-size="11">Streaming DIHARD III 13.18% · offline DIHARD III 12.73% · embargoed until 23 Sep 2026 08:00 PT</text>
+</svg>

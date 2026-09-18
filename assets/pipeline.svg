@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" role="img" aria-label="ASR plus diarization equals a speaker-aware transcript">
+  <rect width="960" height="220" rx="18" fill="#0c0f0a"/>
+  <rect x="24" y="36" width="250" height="148" rx="16" fill="#141914" stroke="#2a3324"/>
+  <text x="149" y="88" text-anchor="middle" fill="#76B900" font-family="system-ui,sans-serif" font-size="13" font-weight="700" letter-spacing="2">ASR</text>
+  <text x="149" y="118" text-anchor="middle" fill="#e8f0dc" font-family="system-ui,sans-serif" font-size="18" font-weight="650">What was said</text>
+  <text x="149" y="146" text-anchor="middle" fill="#8a947c" font-family="system-ui,sans-serif" font-size="13">words + timestamps</text>
+
+  <text x="292" y="118" text-anchor="middle" fill="#76B900" font-family="system-ui,sans-serif" font-size="28" font-weight="700">+</text>
+
+  <rect x="324" y="36" width="250" height="148" rx="16" fill="#141914" stroke="#2a3324"/>
+  <text x="449" y="88" text-anchor="middle" fill="#76B900" font-family="system-ui,sans-serif" font-size="13" font-weight="700" letter-spacing="2">DIARIZATION</text>
+  <text x="449" y="118" text-anchor="middle" fill="#e8f0dc" font-family="system-ui,sans-serif" font-size="18" font-weight="650">Who spoke when</text>
+  <text x="449" y="146" text-anchor="middle" fill="#8a947c" font-family="system-ui,sans-serif" font-size="13">speaker lanes, overlap</text>
+
+  <text x="592" y="118" text-anchor="middle" fill="#76B900" font-family="system-ui,sans-serif" font-size="28" font-weight="700">=</text>
+
+  <rect x="624" y="36" width="312" height="148" rx="16" fill="#182214" stroke="#76B900"/>
+  <text x="780" y="88" text-anchor="middle" fill="#76B900" font-family="system-ui,sans-serif" font-size="13" font-weight="700" letter-spacing="2">SPEAKER-AWARE</text>
+  <text x="780" y="118" text-anchor="middle" fill="#e8f0dc" font-family="system-ui,sans-serif" font-size="18" font-weight="650">Priya: No</text>
+  <text x="780" y="146" text-anchor="middle" fill="#2DD4BF" font-family="system-ui,sans-serif" font-size="18" font-weight="650">Daniel: Yes</text>
+</svg>
