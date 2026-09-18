@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Open in Colab — Nemotron 3 Diarization</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">Nemotron 3 <span>Diarization</span></a>
+    <div class="nav-links">
+      <a href="/">Showcase</a>
+      <a href="/lab">Live lab</a>
+      <a href="/colab">Colab</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Google Colab · T4 GPU</p>
+    <h1>The GitHub “Open in Colab” link cannot see a private repo.</h1>
+    <p class="sub">
+      Colab fetches notebooks from GitHub as a guest, so
+      <code>colab.research.google.com/github/…</code> 404s while this repository
+      is private. Upload the notebook file instead — that always works.
+    </p>
+  </header>
+
+  <main>
+    <section class="panel" style="margin-bottom:18px">
+      <h2>Do this (about 30 seconds)</h2>
+      <ol class="sub" style="max-width:70ch; line-height:1.7">
+        <li>Download the notebook:
+          <a href="/notebook.ipynb" download="nemotron_3_diarization_colab.ipynb"><strong>nemotron_3_diarization_colab.ipynb</strong></a>
+        </li>
+        <li>Open a blank Colab:
+          <a href="https://colab.research.google.com/" target="_blank" rel="noopener">colab.research.google.com</a>
+        </li>
+        <li><strong>File → Upload notebook</strong> → choose the file you just downloaded.</li>
+        <li><strong>Runtime → Change runtime type → T4 GPU</strong> → Save.</li>
+        <li>Put <code>Nemotron-3-Diarization-preview.nemo</code> on Drive (from Downloads), then <strong>Runtime → Run all</strong>.</li>
+      </ol>
+      <div class="controls">
+        <a class="btn primary" href="/notebook.ipynb" download="nemotron_3_diarization_colab.ipynb">Download notebook</a>
+        <a class="btn" href="https://colab.research.google.com/" target="_blank" rel="noopener">Open Colab</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Optional: open from GitHub inside Colab</h2>
+      <p class="sub">
+        In Colab: <strong>File → Open notebook → GitHub</strong>. Connect your
+        GitHub account, tick <strong>Include private repos</strong>, then search
+        <code>cobusgreyling/nemotron-3-diarization</code>.
+        Do not use a <code>colab.research.google.com/github/…</code> URL while
+        the repo is private — that path is unauthenticated and will keep failing.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

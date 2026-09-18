@@ -48,6 +48,21 @@ def lab() -> FileResponse:
     return FileResponse(STATIC / "lab.html")
 
 
+@app.get("/colab")
+def colab() -> FileResponse:
+    return FileResponse(STATIC / "colab.html")
+
+
+@app.get("/notebook.ipynb")
+def notebook() -> FileResponse:
+    path = ROOT / "notebooks" / "nemotron_3_diarization_colab.ipynb"
+    return FileResponse(
+        path,
+        media_type="application/x-ipynb+json",
+        filename="nemotron_3_diarization_colab.ipynb",
+    )
+
+
 @app.get("/api/session")
 def session() -> dict:
     data = load_session()

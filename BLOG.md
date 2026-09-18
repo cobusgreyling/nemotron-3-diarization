@@ -15,7 +15,7 @@ This laptop has **no NVIDIA GPU**. The evaluation licence wants one, and NeMo wa
 
 1. Runtime → Change runtime type → **T4 GPU**. `nvidia-smi` has to show Tesla T4 (16 GB). The model needs about **4 GB**.
 2. Copy the `.nemo` to Google Drive (the Colab disk evaporates; Drive does not).
-3. Open [`notebooks/nemotron_3_diarization_colab.ipynb`](notebooks/nemotron_3_diarization_colab.ipynb).
+3. Open [colab.research.google.com](https://colab.research.google.com/), **File → Upload notebook**, and choose `notebooks/nemotron_3_diarization_colab.ipynb`. A `colab.research.google.com/github/…` URL 404s on this private repo.
 4. Install NeMo, `restore_from` the checkpoint, call `diarize()` on a wav.
 5. The last cells start **Gradio** — the same speaker-lane UI, attached to the notebook, sitting next to the GPU.
 

@@ -32,9 +32,12 @@ No CUDA. You get a 9-second mix with **three speakers and three overlaps**.
 This Mac cannot `restore_from` the checkpoint. Colab can.
 
 1. Put `Nemotron-3-Diarization-preview.nemo` on Google Drive (from NGC `diarization-ea` or the gated HF repo).
-2. Open [`notebooks/nemotron_3_diarization_colab.ipynb`](notebooks/nemotron_3_diarization_colab.ipynb) in Colab.
-3. Runtime → **T4 GPU**. Confirm with `nvidia-smi`.
-4. Run all. The last cells launch **Gradio** — speaker lanes next to the GPU.
+2. Open Colab at [colab.research.google.com](https://colab.research.google.com/).
+   **Do not** use `colab.research.google.com/github/…` while this repo is private — Colab fetches GitHub as a guest and 404s.
+3. **File → Upload notebook** and choose [`notebooks/nemotron_3_diarization_colab.ipynb`](notebooks/nemotron_3_diarization_colab.ipynb) (or download it from the local lab at `/colab`).
+4. Runtime → **T4 GPU**. Confirm with `nvidia-smi`. Run all. The last cells launch **Gradio**.
+
+From inside Colab you can also **File → Open notebook → GitHub**, connect the `cobusgreyling` account, tick **Include private repos**, and open this repo.
 
 ```python
 from nemo.collections.asr.models import SortformerEncLabelModel
